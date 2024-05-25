@@ -4,10 +4,10 @@ export default function Page2()
 {
     return(
         <div>
-            <div className="page2">
-                <div className="glassdiv">
+            <div className="page2" id="page2">
+                <div className="glassdiv" id="glassdiv">
                     <div style={{display:"flex",justifyContent:"center",alignItems: "center",height: "100%"}}>
-                        <div className="text_wrapper">
+                        <div className="text_wrapper" id="text_wrapper">
                             <p>
                                 <span>Supported by </span>
                                 <span style={{color: "#b5fa98"}}>2000+ </span>
@@ -19,16 +19,16 @@ export default function Page2()
                         </div>
                     </div>
                 </div>
-                <div className="bg element1">
+                <div className="bg element1" id="bg">
                     
                 </div>
-                <div className="bg element2">
+                <div className="bg element2" id="bg">
 
                 </div>
-                <div className="bg element3">
+                <div className="bg element3" id="bg">
 
                 </div>
-                <div className="bg element4">
+                <div className="bg element4" id="bg">
 
                 </div>
             </div>

@@ -68,112 +68,112 @@ export default function Page3()
     }
 
     return(
-        <div className="page3">
-        <div className="socials">
-            <div className="text">
+        <div className="page3" id="page3">
+        <div className="socials" id="socials">
+            <div className="text" id="text">
                 <span>Trusted by </span><span style={{color:"#7ED957"}}>3000+ </span><span>Patients all around the </span> <span style={{color: "#6FC3DF"}}>India</span>
             </div>
-            <div className="profiles">
-                <div className="profile">
-                    <img src={profile1} alt="img1" className="profile_picture"/>
+            <div className="profiles" id="profiles">
+                <div className="profile" id="profile">
+                    <img src={profile1} alt="img1" className="profile_picture" id="profile_picture"/>
                 </div>
                 <div className="profile">
-                    <img src={profile2} alt="img2" className="profile_picture"/>
+                    <img src={profile2} alt="img2" className="profile_picture" id="profile_picture"/>
                 </div>
                 <div className="profile">
-                    <img src={profile3} alt="img3" className="profile_picture"/>
+                    <img src={profile3} alt="img3" className="profile_picture" id="profile_picture"/>
                 </div>
                 <div className="profile">
-                    <img src={profile4} alt="img4" className="profile_picture"/>
+                    <img src={profile4} alt="img4" className="profile_picture" id="profile_picture"/>
                 </div>
                 <div className="profile">
-                    <img src={profile5} alt="img5" className="profile_picture"/>
+                    <img src={profile5} alt="img5" className="profile_picture" id="profile_picture"/>
                 </div>
                 <div className="profile">
-                    <img src={profile6} alt="img6" className="profile_picture"/>
+                    <img src={profile6} alt="img6" className="profile_picture" id="profile_picture"/>
                 </div>
                 <div className="profile">
-                    <img src={profile7} alt="img7" className="profile_picture"/>
+                    <img src={profile7} alt="img7" className="profile_picture" id="profile_picture"/>
                 </div>
                 <div className="profile">
-                    <img src={profile8} alt="img8" className="profile_picture"/>
+                    <img src={profile8} alt="img8" className="profile_picture" id="profile_picture"/>
                 </div>
                 <div className="profile">
-                    <img src={profile9} alt="img9" className="profile_picture"/>
+                    <img src={profile9} alt="img9" className="profile_picture" id="profile_picture"/>
                 </div>
                 <div className="profile">
-                    <img src={profile10} alt="img10" className="profile_picture"/>
+                    <img src={profile10} alt="img10" className="profile_picture" id="profile_picture"/>
                 </div>
                 <div className="profile">
-                    <img src={profile11} alt="img11" className="profile_picture"/>
+                    <img src={profile11} alt="img11" className="profile_picture" id="profile_picture"/>
                 </div>
                 <div className="profile">
-                    <img src={profile12} alt="img12" className="profile_picture"/>
+                    <img src={profile12} alt="img12" className="profile_picture" id="profile_picture"/>
                 </div>
             </div>
-            <div className="social_medias">
-                <div className="media">
-                    <img src={social1} alt="facebook" className="media_picture"/>
+            <div className="social_medias" id="social_medias">
+                <div className="media" id="media">
+                    <img src={social1} alt="facebook" className="media_picture" id="media_picture"/>
                 </div>
-                <div className="media">
-                    <img src={social2} alt="instagram" className="media_picture"/>
+                <div className="media" id="media">
+                    <img src={social2} alt="instagram" className="media_picture" id="media_picture"/>
                 </div>
-                <div className="media">
-                    <img src={social3} alt="youtube" className="media_picture"/>
+                <div className="media" id="media">
+                    <img src={social3} alt="youtube" className="media_picture" id="media_picture"/>
                 </div>
-                <div className="media">
-                    <img src={social4} alt="twitter" className="media_picture"/>
+                <div className="media" id="media">
+                    <img src={social4} alt="twitter" className="media_picture" id="media_picture"/>
                 </div>
-                <div className="media">
-                    <img src={social5} alt="linkedin" className="media_picture"/>
+                <div className="media" id="media">
+                    <img src={social5} alt="linkedin" className="media_picture" id="media_picture"/>
                 </div>
             </div>
         </div>
-        <div className="carousel_container">
-            <div className="glassdiv3">
-                <div className="heading">
+        <div className="carousel_container" id="carousel_container">
+            <div className="glassdiv3" id="glassdiv3">
+                <div className="heading" id="heading">
                     <span>Why choose us?</span>
                 </div>
-                <div className="view">
-                    <div className="glassdiv_button left_button">
-                        <button className="btn left_btn" onClick={goleft}>
+                <div className="view" id="view">
+                    <div className="glassdiv_button left_button" id="glassdiv_button">
+                        <button className="btn left_btn" onClick={goleft} id="btn">
                             <span style={{fontSize: "2vw",color: "white"}}>&#60;</span>
                         </button>
                     </div>
-                    <div className="image_container">
+                    <div className="image_container" id="image_container">
                         <img src={content2} alt="" className="feature_image" id="feature_image"/>
                     </div>
-                    <div className="glassdiv_button right_button">
-                        <button className="btn right_btn" onClick={goright}>
+                    <div className="glassdiv_button right_button" id="glassdiv_button">
+                        <button className="btn right_btn" onClick={goright} id="btn">
                             <span style={{fontSize: "2vw",color: "white"}}>&#62;</span>
                         </button>
                     </div>
                 </div>
-                <div className="property">
+                <div className="property" id="property">
                     <span id="property">{content1}</span>
                 </div>
-                <div className="defination">
+                <div className="defination" id="defination">
                     <span id="defination">{content3}</span>
                 </div>
-                <div className="learn_more">
+                <div className="learn_more" id="learn_more">
                     <button className="learn_more_btn" id="learn_more_btn">Learn More</button>
                 </div>
             </div>
             <div className="glassdiv_popup" id="popup">
-                <ul className="services">
-                    <li className="list_item_service">Online Consultant</li>
-                    <li className="list_item_service">Social Forums</li>
-                    <li className="list_item_service">Always Available</li>
-                    <li className="list_item_service">Get Medicine</li>
-                    <li className="list_item_service">Choose Best</li>
+                <ul className="services" id="services">
+                    <li className="list_item_service" id="list_item_service">Online Consultant</li>
+                    <li className="list_item_service" id="list_item_service">Social Forums</li>
+                    <li className="list_item_service" id="list_item_service">Always Available</li>
+                    <li className="list_item_service" id="list_item_service">Get Medicine</li>
+                    <li className="list_item_service" id="list_item_service">Choose Best</li>
                 </ul>
             </div>
-            <div className="bg_elements">
-                <div className="element big_element1"></div>
-                <div className="element big_element2"></div>
-                <div className="element big_element3"></div>
-                <div className="element big_element4"></div>
-                <div className="element big_element5"></div>
+            <div className="bg_elements" id="bg_elements">
+                <div className="element big_element1" id="element"></div>
+                <div className="element big_element2" id="element"></div>
+                <div className="element big_element3" id="element"></div>
+                <div className="element big_element4" id="element"></div>
+                <div className="element big_element5" id="element"></div>
             </div>
         </div>
         <div style={{fontSize: "4vw",textAlign: "center",color: "white",margin:"3vw 0 2vw 0"}}>

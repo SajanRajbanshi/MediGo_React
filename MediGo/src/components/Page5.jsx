@@ -18,15 +18,26 @@ export default function Page5()
         setActive(index)
     }
     return(
-        <div className="page5">
-            <div className="glassdiv_faq">
-                <div className="faq_container">
+        <div 
+            className="page5" 
+            id="page5">
+            <div 
+                className="glassdiv_faq" 
+                id="glassdiv_faq">
+                <div 
+                    className="faq_container" 
+                    id="faq_container">
                 {data.map((d,index)=>(
                         <div key={index}>
-                        <button className="faq_question" onClick={()=>{update(index)}}>
+                        <button 
+                            className="faq_question" 
+                            id="faq_question" 
+                            onClick={()=>{update(index)}}>
                             {d.q}
                         </button>
-                        <div className={active===index?"show":"hide"}>
+                        <div 
+                            id="accordian" 
+                            className={active===index?"show":"hide"}>
                             <p>
                                 {d.a}
                             </p>
