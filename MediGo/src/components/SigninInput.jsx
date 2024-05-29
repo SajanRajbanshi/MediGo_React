@@ -1,9 +1,14 @@
 import "./signinInput.css";
+import { IoEye } from "react-icons/io5";
+import { IoMdEyeOff } from "react-icons/io";
+import { useState } from "react";
 
 export default function SigninInput() {
+  const [isPasswordVisible, setPasswordVisibility] = useState(false);
+
   return (
     <div>
-      <section className="page1Signin">
+      <section className="page1Signin" id="page1Signin">
         <div
           style={{
             display: "flex",
@@ -14,10 +19,11 @@ export default function SigninInput() {
             height: "fit-content",
           }}
         >
-          <div className="textwrapper">
+          <div className="textwrapper" id="textwrapper">
             <div>
               <span
                 className="gradient"
+                id="gradient"
                 style={{ fontSize: "5vw", fontWeight: "600" }}
               >
                 Welcome back
@@ -42,30 +48,59 @@ export default function SigninInput() {
               </span>
             </div>
           </div>
-          <div className="glassdivSignin">
-            <div className="placeholder">
+          <div className="glassdivSignin" id="glassdivSignin">
+            <div className="placeholder" id="placeholder">
               <span>Email</span>
             </div>
-            <div className="inputbox">
-              <input type="text" className="ipbox" />
+            <div className="inputbox" id="inputbox1">
+              <div className="inputBoxWrapper" id="inputBoxWrapper1">
+                <input type="text" className="ipbox" id="ipbox1" />
+              </div>
             </div>
-            <div className="placeholder">
+            <div className="placeholder" id="placeholder">
               <span>Password</span>
             </div>
-            <div className="inputbox">
-              <input type="password" className="ipbox" />
+            <div className="inputbox" id="inputbox2">
+              <div className="inputBoxWrapper" id="inputBoxWrapper2">
+                <input
+                  type={isPasswordVisible ? "text" : "password"}
+                  className="ipbox"
+                  id="ipbox2"
+                />
+                <button
+                  className="passwordVisibilityToggle"
+                  onClick={() => {
+                    setPasswordVisibility(!isPasswordVisible);
+                  }}
+                  id="passwordVisibilityToggle"
+                >
+                  {isPasswordVisible ? (
+                    <IoMdEyeOff
+                      className="passwordVisibilityToggleIcon"
+                      id="passwordVisibilityToggleIcon"
+                    />
+                  ) : (
+                    <IoEye
+                      className="passwordVisibilityToggleIcon"
+                      id="passwordVisibilityToggleIcon"
+                    />
+                  )}
+                </button>
+              </div>
             </div>
-            <div className="button_signin">
-              <div className="button_wrapper">
-                <button className="signinInput">Sign in</button>
+            <div className="button_signin" id="button_signin">
+              <div className="button_wrapper" id="button_wrapper">
+                <button className="signinInput" id="signinInput">
+                  Sign in
+                </button>
               </div>
             </div>
           </div>
         </div>
         <div>
-          <div className="bigcircle"></div>
-          <div className="smallcircle1"></div>
-          <div className="smallcircle2"></div>
+          <div className="bigcircle" id="bigcircle"></div>
+          <div className="smallcircle1" id="smallcircle1"></div>
+          <div className="smallcircle2" id="smallcircle2"></div>
         </div>
       </section>
     </div>

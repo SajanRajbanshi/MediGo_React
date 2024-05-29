@@ -16,10 +16,10 @@ export default function Header() {
                     <div
                         className="logo"
                         id="logo">
-                        <a href="https://sajanrajbanshi.github.io/Landing/">
+                        <Link to="/">
                             <span style={{ color: "black" }}>Medi</span>
                             <span style={{ color: "#C42121" }}>Go</span>
-                        </a>
+                        </Link>
                     </div>
                     <div
                         className="tabs"

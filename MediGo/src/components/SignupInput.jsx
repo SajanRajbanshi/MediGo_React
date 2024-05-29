@@ -1,6 +1,10 @@
 import "./signupInput.css";
+import { IoEye } from "react-icons/io5";
+import { IoMdEyeOff } from "react-icons/io";
+import { useState } from "react";
 
 export default function SignupInput() {
+  const [isPasswordVisible, setPasswordVisibility] = useState(false);
   return (
     <div>
       <div className="page1Signup" id="page1Signup">
@@ -18,6 +22,7 @@ export default function SignupInput() {
             <div>
               <span
                 className="gradient"
+                id="gradient"
                 style={{
                   fontSize: "6vw",
                   fontWeight: "600",
@@ -49,37 +54,81 @@ export default function SignupInput() {
             </div>
           </div>
 
-          <div className="glassdivSignup">
-            <div className="placeholder">
+          <div className="glassdivSignup" id="glassdivSignup">
+            <div className="placeholder" id="placeholder">
               <span>Email</span>
             </div>
-            <div className="inputbox">
-              <input type="text" className="ipbox" name="email" id="email" />
+            <div className="inputbox" id="inputbox1">
+              <div className="inputBoxWrapper">
+                <input type="text" className="ipbox" name="email" id="email" />
+              </div>
             </div>
-            <div className="placeholder">
+            <div className="placeholder" id="placeholder">
               <span>Password</span>
             </div>
-            <div className="inputbox">
-              <input
-                type="password"
-                className="ipbox"
-                name="password"
-                id="password"
-              />
+            <div className="inputbox" id="inputbox2">
+              <div className="inputBoxWrapper">
+                <input
+                  type={isPasswordVisible ? "text" : "password"}
+                  className="ipbox"
+                  name="password"
+                  id="password"
+                />
+                <button
+                  onClick={() => {
+                    setPasswordVisibility(!isPasswordVisible);
+                  }}
+                  className="passwordVisibilityToggle"
+                  id="passwordVisibilityToggle"
+                >
+                  {isPasswordVisible ? (
+                    <IoMdEyeOff
+                      className="passwordVisibilityToggleIcon"
+                      id="passwordVisibilityToggleIcon"
+                    />
+                  ) : (
+                    <IoEye
+                      className="passwordVisibilityToggleIcon"
+                      id="passwordVisibilityToggleIcon"
+                    />
+                  )}
+                </button>
+              </div>
             </div>
-            <div className="placeholder">
+            <div className="placeholder" id="placeholder">
               <span>Re-Password</span>
             </div>
-            <div className="inputbox">
-              <input
-                type="password"
-                className="ipbox"
-                name="re_password"
-                id="re_password"
-              />
+            <div className="inputbox" id="inputbox3">
+              <div className="inputBoxWrapper">
+                <input
+                  type={isPasswordVisible ? "text" : "password"}
+                  className="ipbox"
+                  name="re_password"
+                  id="re_password"
+                />
+                <button
+                  onClick={() => {
+                    setPasswordVisibility(!isPasswordVisible);
+                  }}
+                  className="passwordVisibilityToggle"
+                  id="passwordVisibilityToggle"
+                >
+                  {isPasswordVisible ? (
+                    <IoMdEyeOff
+                      className="passwordVisibilityToggleIcon"
+                      id="passwordVisibilityToggleIcon"
+                    />
+                  ) : (
+                    <IoEye
+                      className="passwordVisibilityToggleIcon"
+                      id="passwordVisibilityToggleIcon"
+                    />
+                  )}
+                </button>
+              </div>
             </div>
-            <div className="button_signin">
-              <div className="button_wrapper">
+            <div className="button_signin" id="button_signin">
+              <div className="button_wrapper" id="button_wrapper">
                 <button className="signupInput" id="signin">
                   Sign up
                 </button>
@@ -88,9 +137,9 @@ export default function SignupInput() {
           </div>
         </div>
         <div>
-          <div className="bigcircle"></div>
-          <div className="smallcircle1"></div>
-          <div className="smallcircle2"></div>
+          <div className="bigcircle" id="bigcircle"></div>
+          <div className="smallcircle1" id="smallcircle1"></div>
+          <div className="smallcircle2" id="smallcircle2"></div>
         </div>
       </div>
     </div>

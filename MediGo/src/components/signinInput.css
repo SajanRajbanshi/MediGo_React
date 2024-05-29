@@ -94,12 +94,23 @@
     font-size: large;
 }
 
-
 .inputbox{
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     z-index: 2;
+}
+
+.inputBoxWrapper
+{
+    position: relative;
+    height: 5vw;
+    min-height: 50px;
+    width: 80%;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
 }
 .ipbox{
     font-family: 'k2d';
@@ -108,11 +119,30 @@
     border-radius: 2vw;
     border-width: 1px;
     background: transparent;
-    height: 5vw;
-    min-height: 50px;
-    width: 70%;
-    min-width: 400px;
+    width: 100%;
     color: black;
+}
+
+.passwordVisibilityToggle
+{
+    background: none;
+    position: absolute;
+    border: none;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.passwordVisibilityToggleIcon
+{
+    height: 2vw;
+    min-height: 20px;
+    width: 2vw;
+    min-width: 20px;
+    opacity: 70%;
 }
 
 

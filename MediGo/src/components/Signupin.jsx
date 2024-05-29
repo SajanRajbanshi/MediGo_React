@@ -1,6 +1,7 @@
 import "./signupin.css";
 import SignupInput from "./SignupInput";
 import SigninInput from "./SigninInput";
+import {Link} from "react-router-dom";
 import { useState } from "react";
 
 export default function Signupin(props) {
@@ -20,15 +21,15 @@ export default function Signupin(props) {
   }
 
   return (
-    <div className="bodySign">
+    <div className="bodySign" id="bodySign">
       <div className="headerSign" id="headerSign">
         <div className="headerdivSign" id="headerdivSign">
           <div className="leftSign" id="left">
             <div className="logoSign" id="logo">
-              <a href="https://sajanrajbanshi.github.io/Landing/">
+              <Link to="/">
                 <span style={{ color: "black" }}>Medi</span>
                 <span style={{ color: "#C42121" }}>Go</span>
-              </a>
+              </Link>
             </div>
             <div className="tabsSign" id="tabs">
               <span className="tab dim" id="tab">
@@ -49,7 +50,7 @@ export default function Signupin(props) {
 
       {active === 1 ? <SigninInput /> : <SignupInput />}
 
-      <div className="moreoptions">
+      <div className="moreoptions" id="moreoptions">
         <div
           style={{
             width: "50%",
@@ -59,7 +60,9 @@ export default function Signupin(props) {
             alignItems: "center",
           }}
         >
-          <button className="google">Continue with Google</button>
+          <button className="google" id="google">
+            Continue with Google
+          </button>
         </div>
         <div
           style={{
@@ -78,23 +81,28 @@ export default function Signupin(props) {
             }}
           >
             <span>{message}</span>
-            <button className="signupAuth" onClick={toggleInput}>
+            <button
+              className="signupAuth"
+              onClick={toggleInput}
+              id="signupAuth"
+            >
               {status}
             </button>
           </div>
         </div>
       </div>
 
-      <div className="footerSign">
-        <div className="glassdiv2">
-          <div className="logo">
-            <a href="https://sajanrajbanshi.github.io/Landing/">
+      <div className="footerSign" id="footerSign">
+        <div className="glassdiv2" id="glassdiv2">
+          <div className="logo" id="logo">
+            <Link to="/">
               <span style={{ color: "black" }}>Medi</span>
               <span style={{ color: "#C42121" }}>Go</span>
-            </a>
+            </Link>
           </div>
           <div
             className="slogan"
+            id="slogan"
             style={{ fontSize: "3vw", color: "#aaaaaa", textAlign: "left" }}
           >
             Your Health our Goal
@@ -118,9 +126,15 @@ export default function Signupin(props) {
               fontWeight: "500",
             }}
           >
-            <div>All Right Reserved 2024</div>
-            <div>Terms and Contditions</div>
-            <div>Privacy Policy</div>
+            <div className="lawsRules" id="lawsRules">
+              All Right Reserved 2024
+            </div>
+            <div className="lawsRules" id="lawsRules">
+              Terms and Contditions
+            </div>
+            <div className="lawsRules" id="lawsRules">
+              Privacy Policy
+            </div>
           </div>
         </div>
       </div>
