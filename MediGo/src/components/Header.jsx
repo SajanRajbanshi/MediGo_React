@@ -1,65 +1,72 @@
 import "./header.css";
+import { Link } from "react-router-dom"
 
-export default function Header(){
+
+export default function Header() {
     return (
-        <div 
-            className="header" 
+        <div
+            className="header"
             id="header">
-            <div 
-                className="headerdiv" 
+            <div
+                className="headerdiv"
                 id="headerdiv">
-                <div 
-                    className="left" 
+                <div
+                    className="left"
                     id="left">
-                    <div 
-                        className="logo" 
+                    <div
+                        className="logo"
                         id="logo">
                         <a href="https://sajanrajbanshi.github.io/Landing/">
-                            <span style={{color: "black"}}>Medi</span>
-                            <span style={{color: "#C42121"}}>Go</span>
+                            <span style={{ color: "black" }}>Medi</span>
+                            <span style={{ color: "#C42121" }}>Go</span>
                         </a>
                     </div>
-                    <div 
-                        className="tabs" 
+                    <div
+                        className="tabs"
                         id="tabs">
-                        <span 
-                            className="tab dim" 
-                            id="tab">Contact
+                        <span
+                            className="tab dim"
+                            id="tab">
+                            Contact
                         </span>
-                        <span 
-                            className="tab dim" 
-                            id="tab">About
+                        <span
+                            className="tab dim"
+                            id="tab">
+                            About
                         </span>
-                        <div 
-                            className="pricing" 
+                        <div
+                            className="pricing"
                             id="pricing">
-                            <span 
-                                className="tab gradient" 
-                                id="tab">Pricing
+                            <span
+                                className="tab gradient"
+                                id="tab">
+                                Pricing
                             </span>
                         </div>
                     </div>
                 </div>
-                <div 
-                    className="right" 
+                <div
+                    className="right"
                     id="right">
-                    <div>
-                        <a 
-                            href="https://sajanrajbanshi.github.io/Medigo_signin/">
-                            <button 
-                                className="signin" 
-                                id="signin">Sign in
+                    <div id="headerAuthDiv">
+                        <Link
+                            to="/Signin">
+                            <button
+                                className="signin"
+                                id="signin">
+                                Sign in
                             </button>
-                        </a>
+                        </Link>
                     </div>
                     <div>
-                        <a 
-                            href="https://sajanrajbanshi.github.io/medigo_signup/">
-                            <button 
-                                className="signup" 
-                                id="signup">Sign up
+                        <Link
+                            to="/Signup">
+                            <button
+                                className="signup"
+                                id="signup">
+                                Sign up
                             </button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

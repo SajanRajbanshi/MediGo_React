@@ -1,25 +1,49 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import './App.css'
-import Header from './components/Header';
-import Page1 from './components/Page1';
-import Page2 from './components/Page2';
-import Page3 from './components/Page3';
-import Page4 from './components/Page4';
-import Page5 from './components/Page5';
-import Footer from './components/Footer';
+import Signupin from './components/Signupin';
+import LandingPage from './components/LandingPage';
 
 function App() {
   return (
-    <>
-      <Header/>
-      <Page1/>
-      <Page2/>
-      <Page3/>
-      <Page4/>
-      <Page5/>
-      <Footer/>
-    </>
+    <Router>
+      <Routes>
+        <Route
+          exact path='/'
+          element={<LandingPage />}>
+        </Route>
+        <Route
+          exact path='/Signin'
+          element={
+            <Signupin
+              initial={
+                {
+                  state: 1,
+                  switch: {
+                    message: "Don't have an account?",
+                    action: "Sign up"
+                  }
+                }
+              } />
+          }>
+        </Route>
+        <Route
+          exact path='/Signup'
+          element={
+            <Signupin
+              initial={
+                {
+                  state: 2,
+                  switch: {
+                    message: "Already have an account?",
+                    action: "Sign in"
+                  }
+                }
+              } />
+          }>
+        </Route>
+      </Routes>
+    </Router>
   )
 }
-
 export default App
